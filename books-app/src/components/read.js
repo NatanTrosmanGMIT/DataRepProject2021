@@ -41,7 +41,7 @@ class Read extends Component {
     render() {
         return (
             <div>
-                <h1>This is my Read Component.</h1>
+                <h1>The Collection</h1>
                 <Books books={this.state.mybooks} ReloadData={this.ReloadData}></Books>
             </div>
         );

@@ -3,6 +3,7 @@ import Card from 'react-bootstrap/Card';
 import { Link } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 import axios from 'axios';
+
 class BookItem extends Component {
 
     constructor() {
@@ -16,7 +17,7 @@ class BookItem extends Component {
         e.preventDefault();
         console.log("Delete: " + this.props.book._id)
 
-        axios.delete("http://localhost:4000/api/books/" + this.props.book._id)
+        axios.delete('http://localhost:4000/api/books/' + this.props.book._id)
             .then(() => {
                 this.props.ReloadData();
             })
@@ -28,19 +29,22 @@ class BookItem extends Component {
         return (
             <div>
                 <Card>
-                    <Card.Header>{this.props.book.Title}</Card.Header>
+                    <div>
+                        <Card.Header>{this.props.book.Title}</Card.Header>
+                    </div>
                     <Card.Body>
                         <blockquote className="blockquote mb-0">
                             <img src={this.props.book.Cover} width="216" height="320"></img>
-                            <footer className="blockquote-footer">
+                            <footer>
                                 <br />
                                 {this.props.book.Authour}
                             </footer>
                         </blockquote>
                     </Card.Body>
-                    <Link to={"/edit/" + this.props.book._id} className="btn btn-primary">Edit</Link>
-                    <Button variant="danger" onClick={this.DeleteMovie}>Delete</Button>
-                    <br />
+                    <div>
+                        <Link to={"/edit/" + this.props.book._id} style={{ height: 45, width: 300 }} className="btn btn-dark">Edit</Link>
+                        <Button variant="danger" style={{ height: 45, width: 300 }} onClick={this.DeleteBook}>Delete</Button>
+                    </div><br />
                 </Card>
             </div>
         );

@@ -8,7 +8,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Create from './components/create';
-import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Read from './components/read';
 import Edit from './components/edit';
 
@@ -19,13 +19,13 @@ class App extends Component {
       <Router>
         <div className="App">
 
-          <Navbar bg="primary" variant="dark">
+          <Navbar bg="dark" variant="dark">
 
-            <Navbar.Brand href="/">Navbar</Navbar.Brand>
+            <Navbar.Brand> Books App </Navbar.Brand>
             <Nav className="me-auto">
-              <Nav.Link href="/">Home</Nav.Link>
-              <Nav.Link href="/read">Read</Nav.Link>
-              <Nav.Link href="/create">Create</Nav.Link>
+              <Nav.Link href="/">Local Time</Nav.Link>
+              <Nav.Link href="/read">Browse Books</Nav.Link>
+              <Nav.Link href="/create">Add a Book</Nav.Link>
             </Nav>
           </Navbar>
 

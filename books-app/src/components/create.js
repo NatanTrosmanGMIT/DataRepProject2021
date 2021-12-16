@@ -66,36 +66,33 @@ class Create extends Component {
     render() {
         return (
             <div>
-                <h1>This is my Create Component!</h1>
+                <h1>The Creation</h1>
                 <form onSubmit={this.handleSubmit}>
 
-                    <div className="form-group">
-                        <label>Add Book Title: </label>
-                        <input type="text"
-                            className="form-control"
+                    <div>
+                        <label>Add Book Title: </label><br/>
+                        <textarea type="text" cols="60" rows="1"
                             value={this.state.Title}
                             onChange={this.onChangeBookTitle}
-                        />
+                        /><br/><br/>
                     </div>
-                    <div className="form-group">
-                        <label>Add Book Authour: </label>
-                        <input type="text"
-                            className="form-control"
+                    <div>
+                        <label>Add Book Authour: </label><br/>
+                        <textarea type="text" cols="60" rows="1"
                             value={this.state.Authour}
                             onChange={this.onChangeAuthour}
-                        />
+                        /><br/><br/>
                     </div>
-                    <div className="form-group">
-                        <label>Add Book Cover: </label>
-                        <textarea type="text"
-                            className="form-control"
+                    <div>
+                        <label>Add Book Cover: </label><br/>
+                        <textarea type="text" cols="120" rows="2"
                             value={this.state.Cover}
                             onChange={this.onChangeBookCover}
-                        />
+                        /><br/><br/><br/>
                     </div>
                     <div>
                         <input type="submit" value="Add Book"
-                            className="btn btn-primary"></input>
+                            className="btn btn-dark"></input>
                     </div>
                 </form>
             </div>
